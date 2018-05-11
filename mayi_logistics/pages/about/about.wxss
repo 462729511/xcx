@@ -1,0 +1,18 @@
+/* mayi_logistics/pages/about/about.wxss */
+.container{
+  width: 100%
+}
+.header,.Disclaimer,.contact{
+  width: 100%;
+  height: 400rpx;
+  padding:20rpx; 
+}
+.header text,.contact text,.Disclaimer text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: red;
+  padding-left: 10rpx
+}
+
+

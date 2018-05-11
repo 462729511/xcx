@@ -1,0 +1,20 @@
+{
+      "tabBar": {
+        "selectedColor": "#0089d7",
+        "list": [
+          {
+            "pagePath": "pages/index/index",
+            "text": "返回首页",
+            "iconPath": "pages/resource/images/homet.png",
+            "selectedIconPath": "pages/resource/images/home.png"
+          },
+          {
+            "pagePath": "pages/center/center",
+            "text": "个人中心",
+            "iconPath": "pages/resource/images/centert.png",
+            "selectedIconPath": "pages/resource/images/center.png"
+          }
+        ]
+      }
+
+}

@@ -1,0 +1,34 @@
+
+<view class='box'>
+    <view class="huoyun1"  wx:if="{{list==''}}">
+        暂无数据
+    </view>
+      <view class="huoyun" wx:for="{{list}}"  bindtap='detail' data-id="{{item.id}}" data-title="{{item.title}}">
+        <view class="huoyun-top">
+          <!-- <image src="{{item.thumb}}" class="chengshi"></image> -->
+          <text>{{item.title}}</text>
+          <!-- <view class="map" catchtap='gomap'>
+            <image src="{{item.add}}" class="adress"></image>
+            <text>{{item.distance}}km</text>
+          </view> -->
+        </view>
+        <view class="huoyun-bottom clearfix" >
+          <image src="{{item.logo}}" class="imgo"></image>
+          <view class="hb-right">
+            <!-- <view> <text>直达:</text><text style="color:orange">{{item.zd}}</text> </view> -->
+            <view><text>座机：</text><text>{{item.tel}}</text></view>   
+            <text class="scan">浏览量:{{item.page_views}}</text>   
+            <view> <text>地址：{{item.address}}</text></view>
+          </view>
+          <image src="../resource/images/phone.png" class="phone" catchtap='calling'  data-tel="{{item.tel}}"></image> 
+        </view>
+      </view>
+       <view class="main-bottom">
+        <view class="complaints" catchtap='callback'>
+          <text>返回首页</text>
+        </view>
+        <view class="fenxiang" catchtap="center">
+          <text>个人中心</text>
+        </view>
+    </view>  
+  </view>

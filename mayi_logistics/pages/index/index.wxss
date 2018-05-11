@@ -1,0 +1,226 @@
+
+.container{
+  width: 100%;
+  height: 100%;
+   background-color: #eee; 
+}
+.clearfix::after{
+  content: ".";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.slide-image{
+   width: 100%; 
+  height: 400rpx;
+}
+.swi{
+   width: 100%; 
+  height: 400rpx;
+}
+.bulletin{
+  width: 100%;
+  height: 250rpx;
+}
+.bulletin-top{
+  width: 100%;
+  height: 70rpx;
+  background-color: #eee;
+  border-bottom: 2px solid #eee;
+}
+.bulletin-top text{
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+}
+.bulletin-for{
+  width: 100%;
+  height: 250rpx;
+  background-color: white
+}
+.bulletin-bottom{
+  width: 100%;
+  height: 40rpx;
+  background-color: white;
+}
+.bulletin-bottom text{
+  font-size: 30rpx;
+  padding-left: 15rpx;
+}
+.city{
+  width: 100%;
+  height: 100rpx;
+  display: flex; 
+  justify-content: space-between;
+  background-color: white;  
+}
+ .city text{
+  display: block
+} 
+.orgin{
+  width: 200rpx;
+  height: 60rpx;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  /* font-size: 36rpx; */
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+}
+
+.aim{
+  width: 200rpx;
+  height: 60rpx;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.search{
+  width: 100%;
+  height: 70rpx;
+   background-color: white 
+}
+.search text{
+  display: block;
+  width: 92%;
+  background-color: #0089d7;
+  margin: 0 auto;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  color: white;
+  font-size: 30rpx;
+}
+.announcement{
+  width: 100%;
+  height: 45rpx;
+  background-color: white;
+  display: flex;
+  align-items: flex-start;  
+  padding-bottom: 50rpx;
+}
+swiper-item{
+   font-size: 25rpx;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ letter-spacing: 2px;
+}
+.laba{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 45rpx;
+  color: red;
+  padding-left: 10rpx;
+  padding-top: 5rpx;
+}
+/* .announcement text{
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  display: block 
+} */
+.huoyun{
+  width: 100%;
+  margin-top: 10rpx;
+}
+.huoyun-top{
+  width: 98%;
+  height: 60rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0c8fbd;
+  margin: 0 auto
+}
+.map{
+  /* margin-left: 280rpx; */
+  display: flex;
+  justify-content: flex-end;
+  width: 300rpx;
+}
+.adress{
+  width: 32rpx;
+  height: 35rpx;
+  padding-left: 10rpx;
+  padding-top: 15rpx;
+}
+.distance{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #ccc;
+  width: 180rpx;
+  display: block;
+  text-align: left
+}
+.title{
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  text-align: center;
+}
+.chengshi{
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 20rpx;
+  /* margin-top: 10rpx; */
+}
+.huoyun-bottom{
+  width: 98%;
+  background-color: white;
+  /* margin-top: 3rpx */
+  margin: 2rpx auto
+}
+.imgo{
+  width: 80rpx;
+  height: 80rpx;
+  padding: 20rpx;
+  float: left;
+}
+.hb-right{
+  font-size: 25rpx;
+  color: gray;
+  margin-left: 10rpx;
+  float: left;
+  position: relative;
+  width: 450rpx;
+}
+.scan{
+   /* float: right;  */
+   position: absolute;
+   right: 0;
+  top:8rpx;
+
+}
+.hb-right view{
+  margin-bottom:10rpx;
+  margin-top: 7rpx;
+}
+.phone{
+  width: 60rpx;
+  height: 60rpx;
+   margin-right: 50rpx; 
+   margin-top: 30rpx;
+  float: right;
+}
+.huoyun1{
+  font-size: 70rpx;
+  /* display: block; */
+  margin:0 auto;
+  color: #ccc;
+  text-align: center;
+  background-color: white;
+}
+@import '../../model/model.wxss'

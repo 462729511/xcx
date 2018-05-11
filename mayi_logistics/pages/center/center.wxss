@@ -1,0 +1,74 @@
+/* pages/center/center.wxss */
+.userinfo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 10rpx solid #eee;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: black;
+}
+.money,.company,.card,.call,.copyright{
+  width: 97%;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+.money-left{
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 10rpx;
+}
+.record{
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+.money-right{
+   padding-left: 410rpx; 
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+.many{
+  font-size: 30rpx;
+  color: red;
+}
+.company-right{
+   padding-left: 470rpx; 
+}
+.more:after{
+   content: " ";
+    display: inline-block;
+    height: 20rpx;
+    width: 20rpx;
+    border-width: 2px 2px 0 0;
+    border-color: #ccc;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+ }
+ .right{
+     padding-left: 440rpx; 
+ }
+.call-right{
+  padding-left: 500rpx;
+}                
+.copyright-right{
+  padding-left: 580rpx;
+}                
+.service{        
+  height: 100rpx;
+  width: 97%;    
+  margin: 20rpx auto;
+  /* border-right: 1px solid #eee; */
+}

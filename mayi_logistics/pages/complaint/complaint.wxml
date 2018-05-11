@@ -1,0 +1,24 @@
+<import src="../../model/model.wxml"/>
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset" bindreset="formReset">
+      <view class="main">
+          <textarea placeholder='请输入您的投诉留言' name="textarea"></textarea>   
+      </view>
+    
+
+   <view style='padding:40rpx 0rpx;'>
+      <view class="order_title clearfix">
+        <view wx:if="{{!userinfo.mobile}}" class="title" style='float:left' bindtap="chooseimage" class="upimg">+</view>
+        <text class="addImg">添加图片(可选)</text>
+        <view wx:if="{{tempFilePaths.length>0&&!userinfo.mobile}}" class="title" style='float:right;color:red' bindtap="removeimgs">删除图片</view>
+      </view>
+  </view>
+  
+  <view style='margin-bottom:100rpx;margin-top:10rpx;'>
+      <view class='imgs'>
+        <image wx:for="{{tempFilePaths}}" src="{{item}}" mode="widthFix" />  
+      </view> 
+  </view>
+    <button formType="submit" class="btn" >提交</button>
+   </form>
+</view>

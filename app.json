@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "mayi_logistics/pages/index/index",
+    "mayi_logistics/pages/add/add",
+    "mayi_logistics/pages/edit/edit",
+    "mayi_logistics/pages/pay/pay",
+    "mayi_logistics/pages/center/center",
+    "mayi_logistics/pages/details/details",
+    "mayi_logistics/pages/forms/forms",
+    "mayi_logistics/pages/release/release",
+    "mayi_logistics/pages/city/city",
+    "mayi_logistics/pages/search/search",
+    "mayi_logistics/pages/about/about",
+    "mayi_logistics/pages/complaint/complaint",
+    "mayi_logistics/pages/announcement/announcement"
+  ],
+  "window": {
+    "navigationBarTextStyle": "light",
+    "navigationBarBackgroundColor": "#0089d7"
+  },
+ "tabBar": {
+  "selectedColor": "#0089d7",
+  "list": [
+    {
+      "pagePath": "mayi_logistics/pages/index/index",
+      "text": "专线查询",
+      "iconPath": "mayi_logistics/pages/resource/images/homet.png",
+      "selectedIconPath": "mayi_logistics/pages/resource/images/home1.png"
+    },
+    {
+      "pagePath":"mayi_logistics/pages/about/about",
+      "text": "关于我们",
+      "iconPath": "mayi_logistics/pages/resource/images/about.png",
+      "selectedIconPath": "mayi_logistics/pages/resource/images/about1.png"
+    },
+    {
+      "pagePath": "mayi_logistics/pages/complaint/complaint",
+      "text":"投诉留言",
+      "iconPath": "mayi_logistics/pages/resource/images/complaint1.png",
+      "selectedIconPath": "mayi_logistics/pages/resource/images/complaint.png"
+    },
+    {
+      "pagePath": "mayi_logistics/pages/center/center",
+      "text": "个人中心",
+      "iconPath": "mayi_logistics/pages/resource/images/centert.png",
+      "selectedIconPath": "mayi_logistics/pages/resource/images/center1.png"
+    }
+  ]
+}
+}

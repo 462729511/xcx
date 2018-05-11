@@ -1,0 +1,18 @@
+<!--pages/city/city.wxml-->
+<view class="city-top">
+   <text class="hot-city">热门城市</text>
+   <view  class="city">
+      <view wx:for="{{hotCity}}" wx:key="{{index}}" class="chengshi">
+            <text>{{item}}</text>   
+      </view>
+   </view>
+</view>
+
+<view class="city-all">
+    <text class="all">所有城市</text>
+    <view class="province">
+       <view wx:for="{{provice}}" wx:key="{{index}}" class="sheng">
+         <text>{{item}}</text>
+       </view>
+    </view>
+</view>

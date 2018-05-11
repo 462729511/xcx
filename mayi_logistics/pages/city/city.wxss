@@ -1,0 +1,33 @@
+/* pages/city/city.wxss */
+.city-top,.city-all{
+  width: 95%;
+  margin: 0 auto;
+}
+.hot-city,.all{
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: block
+}
+.city,.province{
+  font-size: 30rpx;
+  width: 100%;
+  display: flex;
+   flex-wrap: wrap; 
+   justify-content: flex-start; 
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+   margin-top: 20rpx; 
+  font-weight: 600;
+}
+.chengshi,.sheng{
+    width: 24.44444444%;
+    height:60rpx; 
+   border-bottom: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+   line-height: 60rpx;
+   /* border-left: 1px solid #ccc; */
+}
+
+
+

@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" > 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="call" bindtap='calling'>
+      <image src="../resource/images/call1.png" class="money-left"></image>
+      <text class="record">联系我们</text>
+      <view class="call-right">
+        <view class="more"> </view>
+     </view>
+  </view>
+  <view class="call" bindtap='release'>
+      <image src="../resource/images/fabut1.png" class="money-left"></image>
+      <text class="record">我的发布</text>
+      <view class="call-right">
+        <view class="more"> </view>
+     </view>
+  </view>
+
+  <view class="call" bindtap='forms'>
+      <image src="../resource/images/fabu1.png" class="money-left"></image>
+      <text class="record">我要发布</text>
+      <view class="call-right">
+        <view class="more"> </view>
+     </view>
+  </view>
+
+    <!-- <view class="copyright">
+      <image src="../resource/images/card1.png" class="money-left"></image>
+      <text class="record">版权</text>
+      <view class=".copyright-right">
+        <view class="more"> </view>
+     </view>
+  </view> -->
+
+  <view class="service">
+    <button open-type="contact">微信客服(9:00-17:00)</button>
+  </view>
+
+</view>

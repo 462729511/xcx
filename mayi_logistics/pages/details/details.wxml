@@ -1,0 +1,51 @@
+<!--pages/details/details.wxml-->
+<view class="contain">
+  <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swi">
+        <block wx:for="{{thumb}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+  </swiper>
+  <text class="info">感谢亲的支持，做货运不容易，麻烦亲给我们分享下吧，谢谢！</text>
+  <view class="main-info">
+      <view>
+         <text style="font-weight:600">直达：</text><text style="color:orange">{{end_point}}</text>
+      </view>
+      <view wx:for="{{way_point}}" wx:key="{{index}}">
+         <text style="font-weight:600">路线{{index+1}}：</text><text>{{item}}</text>
+      </view>
+      <view>
+         <text style="font-weight:600">联系人：</text><text>{{contact}}</text>
+      </view>
+         <view>
+         <text style="font-weight:600">手机：</text><text>{{mobile}}</text>
+         <image src="../resource/images/phone.png" class="phone" bindtap='calling'></image>
+      </view>
+      <view>
+         <text style="font-weight:600">座机：</text><text>{{tel}}</text>
+      </view>
+      <view>
+         <text style="font-weight:600">传真：</text><text>{{fax}}</text>
+      </view>
+      <view>
+         <text style="font-weight:600">地址：</text><text>{{address}}</text>
+      </view>
+      <view>
+         <text style="font-weight:600">补充说明：</text><text>{{directions}}</text>
+      </view>
+      <view>
+         <text style="font-weight:600">公司简介：</text><text>{{content}}</text>
+      </view>
+  </view>
+   <view class="main-bottom">
+      <view class="complaints" bindtap='navi'>
+        <button style="background-color: #0089d7;color:white;line-height:80rpx">开始导航</button>
+      </view>
+        <view class="fenxiang"> 
+        <button type="primary" open-type="share" style="line-height:80rpx">分享</button>
+       </view> 
+  </view> 
+</view>
+

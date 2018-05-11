@@ -1,0 +1,97 @@
+<!--pages/forms/forms.wxml-->
+<import src="../../model/model.wxml"/>
+<form class="contain clearfix" bindsubmit="formSubmit" bindreset="formReset">
+<template is="areaData" data="{{...item}}"/>
+    <view class="login-num">
+        <text>公司名称:</text>
+        <input placeholder="必填" focus="{{focus}}" class="number" name="title" bindchange='companynamebindchange'/>
+    </view>
+     <view class="login-num" bindtap="translate" data-typea="1">
+          <text class="fabucity">起始点:</text> 
+        <text class="infoText">{{province}} {{city}} {{county}}</text>
+    </view>
+     <view class="login-num" bindtap="translate" data-typea="2">
+        <text class="fabucity">目的地:</text>
+        <!-- <input placeholder="必填 例:南京 北京" focus="{{focus}}" class="number" name="directLine"/> -->
+         <text class="infoText">{{province2}} {{city2}} {{county2}}</text>
+    </view>
+      <view class="way">
+        <button style="margin-left:0;margin-right:0；color:green" bindtap='addinps'>+</button>
+        <text class="way_area">途径地:</text>
+          <!-- <input placeholder="例：南京-北京" focus="{{focus}}" class="number" name="way_point" bindchange="waypointbindchange"/>  -->
+         <block wx:for="{{inps}}" wx:key="{{index}}">  
+        <input placeholder="例：南京-北京" focus="{{focus}}" data-id="{{index}}" class="way_city" name="way_point" bindchange="waypointbindchange"/>
+        </block>
+            <!-- <input class='create-li' data-id="{{index}}" placeholder="选项"  bindinput='bindKeyInput'></input>   -->
+       
+        <button style="margin-left:0;margin-right:0;color:red;font-weight:600" bindtap='delinps'>-</button>
+    </view> 
+     <view class="login-num">
+        <text>联系人:</text>
+        <input placeholder="必填" focus="{{focus}}" class="number" name="contact" bindchange="namebindchange"/>
+    </view>
+    <view class="login-num">
+        <text>座机号:</text>
+        <input placeholder="可选" focus="{{focus}}" class="number" name="seatNumber"/>
+    </view>
+    <view class="login-num">
+        <text>传真号:</text>
+        <input placeholder="可选" focus="{{focus}}" class="number" name="fax"/>
+    </view>
+    <view class="login-num">
+        <text>手机号:</text>
+        <input placeholder="必填" focus="{{focus}}" class="number" type='number' name="mobile" bindchange='phonenumbindchange'/>
+    </view>
+    <view class="login-num">
+        <text>地址:</text>
+        <input placeholder="必填" focus="{{focus}}" class="number" name="address" bindchange="addressbindchange"/>
+    </view>
+    <view class="login-num">
+        <input placeholder="补充说明" focus="{{focus}}" class="number" name="directions"bindchange="directionschange"/>
+    </view>
+    <view class="login-num" style="height:200rpx;">
+        <input placeholder="公司简介" focus="{{focus}}" class="number" name="content"bindchange="introductionchange" />
+    </view> 
+    <radio-group class="radio-group" bindchange="radioChange" name="isor">
+    <text>是否有效路线:</text>  
+     <label class="or">
+      <text>是</text>
+        <radio class="isradio" checked="true" value="1" ></radio>
+     </label>
+     <label class="or">
+      <text>否</text>
+        <radio class="isradio" value="0"></radio>
+     </label>
+    </radio-group>
+  <view style='padding:40rpx 0rpx;'>
+      <view class="order_title clearfix">
+        <view wx:if="{{!userinfo.mobile}}" class="title" style='float:left' bindtap="chooseimage" class="upimg">+</view>
+        <text class="addImg">添加幻灯片</text>
+        <view wx:if="{{tempFilePaths.length>0&&!userinfo.mobile}}" class="title" style='float:right;color:red' bindtap="removeimgs">删除图片</view>
+      </view>
+  </view>
+  
+  <view style='margin-bottom:100rpx;margin-top:10rpx;'>
+      <view class='imgs'>
+        <image wx:for="{{tempFilePaths}}" src="{{item}}" mode="widthFix" />  
+      </view> 
+  </view>
+  
+   <view style='padding:40rpx 0rpx;'>
+      <view class="order_title clearfix">
+        <view wx:if="{{!userinfo.mobile}}" class="title" style='float:left' bindtap="chooseicon" class="upimg">+</view>
+        <text class="addImg">添加图标(仅限一张)</text>
+        <view wx:if="{{tempFilePaths.length>0&&!userinfo.mobile}}" class="title" style='float:right;color:red' bindtap="removeimgs">删除图标</view>
+      </view>
+  </view>
+   <view style='margin-bottom:100rpx;margin-top:10rpx;'>
+      <view class='imgs'>
+        <image wx:for="{{tempFilePathss}}" src="{{item}}" mode="widthFix" />  
+      </view> 
+  </view>
+ 
+    <button class="fabu" formType="submit">
+       确认发布 
+    </button>
+</form>
+   

@@ -1,0 +1,15 @@
+<!--mayi_logistics/pages/about/about.wxml-->
+<view class="container">
+    <view class="header">
+      <text >关于我们</text>
+       <rich-text nodes="{{company_profile}}" bindtap="tap" class="contents"></rich-text>
+    </view>
+    <view class="Disclaimer">
+        <text>免责声明</text>
+        <rich-text nodes="{{disclaimer}}" bindtap="tap" class="disclaimer"></rich-text>
+    </view>
+    <view class="contact">
+         <text>联系我们</text>
+         <rich-text nodes="{{contact}}" bindtap="tap" class="contacts"></rich-text>
+    </view>
+</view>

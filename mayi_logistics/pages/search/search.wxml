@@ -1,0 +1,28 @@
+<!--mayi_logistics/pages/search/search.wxml-->
+<view class="huoyun" wx:for="{{list}}" wx:key="{{index}}" bindtap='detail'>
+      <view class="huoyun-top">
+         <image src="{{item.thumb}}" class="chengshi"></image>
+         <text>{{item.company}}</text>
+        <view class="map" bindtap='gomap'>
+           <image src="{{item.add}}" class="adress"></image>
+           <text>{{item.distance}}km</text>
+        </view>
+      </view>
+      <view class="huoyun-bottom clearfix">
+        <image src="../resource/images/nav0.png" class="imgo"></image>
+        <view class="hb-right">
+          <view> <text>直达:</text><text style="color:orange">{{item.zd}}</text> </view>
+          <view><text>中转：</text><text>{{item.zz}}</text></view>     
+          <view> <text>地址：{{item.address}}</text></view>
+        </view>
+        <image src="../resource/images/phone.png" class="phone" bindtap='calling'></image>
+      </view>
+      <view class="main-bottom">
+          <view class="complaints">
+            <text>投诉</text>
+          </view>
+          <view class="fenxiang">
+            <text>分享</text>
+          </view>
+      </view>
+</view>

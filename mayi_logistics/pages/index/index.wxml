@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<import src="../../model/model.wxml"/>
+<view class="container">
+  <template is="areaData" data="{{...item}}"/>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swi">
+      <block wx:for="{{banner}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.thumb}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    
+    <swiper class="announcement" vertical="true" autoplay="true" circular="true" interval="2000" >
+      <block wx:for="{{msgList}}">
+     
+          <swiper-item>
+          <image src="{{item.url}}" class="laba"></image>
+          <text class="swiper_item" data-id="{{item.id}}" bindtap='an_detail'>{{item.title}}</text>
+          </swiper-item>
+      </block>
+    </swiper>
+
+
+    <view class="city">
+        <!-- <text class="orgin" bindtap='translate' data-typea="1">{{origin}}</text> -->
+         <text class="county orgin" bindtap='translate' data-typea="1"> {{county}}</text>
+        <image src="../resource/images/tog.png" class="icon"></image>
+        <!-- <text class="aim" bindtap='translate' data-typea="2">{{aim}}</text> -->
+        <text class="county aim" bindtap='translate' data-typea="2"> {{county2}}</text>
+
+    </view>
+
+    <view class="search" bindtap='search'>
+      <text class="start">开始搜索</text>
+    </view>
+
+
+    <view class="huoyun1"  data-id="{{item.id}}" wx:if="{{list==''}}">
+        暂无数据
+    </view>
+    
+    <view class="huoyun" wx:for="{{list}}" wx:key="{{index}}" bindtap='detail' data-id="{{item.id}}" data-title="{{item.title}}" data-add="{{item.address}}">
+      <view class="huoyun-top">
+         <!-- <image src="{{item.thumb}}" class="chengshi"></image> -->
+         <text class='title' >{{item.title}}</text>
+        <view class="map" catchtap='gomap'>
+           <image src="{{add}}" class="adress"></image>
+           <text class="distance">{{item.distance}}km</text>
+        </view>
+      </view>
+      <view class="huoyun-bottom clearfix">
+        <image src="{{item.logo}}" class="imgo"></image>
+        <view class="hb-right">
+          <!-- <view> <text>直达:</text><text style="color:orange">{{item.zd}}</text> </view> -->
+          <view><text>座机：</text><text>{{item.tel}}</text></view>   
+          <text class="scan">浏览量:{{item.page_views}}</text>  
+          <view> <text>地址：{{item.address}}</text></view>
+        </view>
+        <image src="../resource/images/phone.png" class="phone" catchtap='calling' data-tel="{{item.tel}}"></image>
+      </view>
+    </view>
+ 
+</view>
+
+ 

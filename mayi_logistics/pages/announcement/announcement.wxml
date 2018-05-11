@@ -1,0 +1,9 @@
+<!--mayi_logistics/pages/announcement/announcement.wxml-->
+<view class="container">
+  <view class="title">
+      <text class="header">{{title}}</text>
+      <rich-text nodes="{{description}}" bindtap="tap" class="contents"></rich-text>
+
+  </view>
+
+</view>
