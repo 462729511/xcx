@@ -1,4 +1,2 @@
-# 微擎小程序模块示例
-1. 增删该查
-2. 上传图片 
-3. 支付
+小程序演示
+![image](https://github.com/462729511/xcx/blob/master/123.gif)
